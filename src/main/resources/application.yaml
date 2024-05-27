@@ -2,13 +2,6 @@ server:
   port: 8230
 
 spring:
-  jpa:
-    properties:
-      hibernate:
-        order_updates: true
-        batch_versioned_data: true
-        jdbc:
-          batch_size: 3
   datasource:
     driverClassName: org.postgresql.Driver
     url: ${balance.datasource.host}/${balance.datasource.name}
@@ -23,7 +16,15 @@ spring:
 
 balance:
   datasource:
+    batch-size: 15
     host: jdbc:postgresql://localhost:5432
     name: solidgate
     username: solid
     password: solid
+
+logging:
+  level:
+    net:
+      ttddyy:
+        dsproxy:
+          listener: debug

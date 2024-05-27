@@ -59,6 +59,11 @@
             <version>1.13.11</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.gavlyukovskiy</groupId>
+            <artifactId>datasource-proxy-spring-boot-starter</artifactId>
+            <version>1.9.1</version>
+        </dependency>
     </dependencies>
 
     <build>
