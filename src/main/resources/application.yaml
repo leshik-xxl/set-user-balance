@@ -1,0 +1,30 @@
+server:
+  port: 8230
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: ${balance.datasource.host}/${balance.datasource.name}
+    username: ${balance.datasource.username}
+    password: ${balance.datasource.password}
+    hikari:
+      maximum-pool-size: 30
+  flyway:
+    url: ${balance.datasource.host}/${balance.datasource.name}
+    user: ${balance.datasource.username}
+    password: ${balance.datasource.password}
+
+balance:
+  datasource:
+    batch-size: 15
+    host: jdbc:postgresql://localhost:5432
+    name: solidgate
+    username: solid
+    password: solid
+
+logging:
+  level:
+    net:
+      ttddyy:
+        dsproxy:
+          listener: debug
